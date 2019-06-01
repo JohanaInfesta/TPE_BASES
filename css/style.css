@@ -1,0 +1,191 @@
+/*Indice*/
+/* 1. Selectores universales*/
+/* 2. Header                */
+/* 3. Conteiners-cuerpo     */
+/*    3.A. Index            */
+/*    3.B. Login            */
+/*    3.C. Books            */
+/*    3.D. Authors          */
+/*    3.E. ABM              */
+/* 4. Footer                */
+/* 5. Ventana Emergente     */
+
+/* 1. Selectores universales*/
+
+body {
+    color: black;
+    background-color: #dfdfdf !important;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif !important;
+    font-style: normal; font-weight: 300;
+}
+.regular {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif !important;
+    font-style: normal; font-weight: 300;
+}
+.regular_italic {
+    font-family: "Playfair Display", Helvetica, Arial, sans-serif !important;
+    font-style: italic; font-weight: 400;
+}
+.semibold {
+    font-family: "Playfair Display", Helvetica, Arial, sans-serif !important;
+    font-style: normal; font-weight: 700;
+}
+.semibold_italic {
+    font-family: "Playfair Display", Helvetica, Arial, sans-serif !important;
+    font-style: italic; font-weight: 700;
+}
+.bold, .wysiwyg-ce h1, .wysiwyg-ce h2, .wysiwyg-ce h3, .wysiwyg-ce h4, .wysiwyg-ce h5, .wysiwyg-ce h6, #semplice h1, #semplice h2, #semplice h3, #semplice h4, #semplice h5, #semplice h6 {
+    font-family: "Playfair Display", Helvetica, Arial, sans-serif;
+    font-style: normal; font-weight: 700;
+}
+.bold_italic {
+    font-family: "Playfair Display", Helvetica, Arial, sans-serif !important;
+    font-style: italic; font-weight: 700;
+}
+.custom_one {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif !important;
+    font-style: normal; font-weight: 400;
+}
+.custom_one_italic {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif !important;
+    font-style: normal;
+    font-weight: 700;
+ }
+ a, a:hover, a::selection, a:active{
+    color: #927986;;
+ }
+
+ .authorsDropdown:hover .dropdown-menu {
+     display: block;
+ }
+ .progress {
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 50%;
+    background-color: transparent;
+}
+
+.progress-bar {
+    animation: progress 3s ease-out forwards, progress-bar-stripes 2s linear infinite;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+/*--- 3. Conteiners-cuerpo  ---*/
+/*    3.A. Index            */
+
+.cuerpo-index {
+    text-align: center;
+    margin-top: 20px;
+}
+/*---    3.B. Login         ---*/
+.login, .registro{
+    text-align: center;
+}
+
+.form-group small{
+    color: #ffff;
+}
+.login button, .registro button{
+    padding:0.6em 1em;
+
+}
+/*    3.C. Books            */
+.portada, .authors{
+    display: inline-block;
+    margin:3% 0;
+}
+.portada img {
+    width: 159px;
+    height: 289px;
+    display: inline-block;
+}
+.authors img{
+    width: 190px;
+    height: 280px;
+    display: inline-block;
+}
+
+.itemBox{
+    display: inline-block;
+}
+.itemBox .author, .itemBox .book{
+    width: 190px;
+    height: 280px;
+    float: left;
+}
+.itemBox .itemName{
+    display: inline;
+}
+/*---    3.E. ABM           ---*/
+
+.cuerpo-form{
+    margin: auto;
+}
+
+
+#mensajeForm{
+    top: 15px;
+    bottom: 15px;
+}
+/*--- 4. Footer            ---*/
+footer {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    padding: 55px 50px;
+    margin-top: 80px;
+    bottom: 0;
+    font-weight: bolder;
+    text-align: center;
+}
+.footer-navigation a h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+.footer-navigation a {
+    text-decoration: none;
+}
+.footer-navigation p.company-name {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+@media (max-width:767px) {
+    .footer-contacts {
+        margin: 30px 0;
+    }
+}
+.footer-about h4 {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer .form-control,
+.footer .btn-default {
+    margin: 10px 0 10px 0;
+}
+div.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 1;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.social-links a:hover {
+    color:gray;
+}
