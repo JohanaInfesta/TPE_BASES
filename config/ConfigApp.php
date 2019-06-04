@@ -6,7 +6,7 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
         ''=> 'IndexController#index',
-      
+
     ];
 
 }
