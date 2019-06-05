@@ -2,9 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <title></title>
 </head>
 <body>
   
+
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -7,9 +7,7 @@ define('VALOR1', 1);
 define('VALOR2', 2);
 
     include_once 'config/ConfigApp.php';
-    include_once 'model/indexModel.php';
-    include_once 'view/indexView.php';
-    include_once 'controller/indexController.php';
+
 
 function parseURL($url)
 {
