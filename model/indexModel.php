@@ -15,5 +15,18 @@ class indexModel extends Model
   //   return $sentencia->fetchAll();
   //
   // }
+  function getCliente($cuit_cuil){
+    $sentence  = $this->db->prepare( "SELECT id_alquiler, nro_estanteria, nro_fila, nro_posicion, estado,
+                                    fecha_desde, fecha_hasta
+                                      FROM unc_248998.fn_g02_listado_posiciones_vacias_para_clienteX($cuit_cuil);");
+    $sentence->execute();
+    return $sentence->fetchAll();
+  }
+  function getClientes(){
+    $sentence = $this->db->prepare( "SELECT cuit_cuil, apellido, nombre
+                                      FROM unc_248998.fn_g02_listado_clientes()");
+    $sentence->execute();
+    return $sentence->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
 ?>

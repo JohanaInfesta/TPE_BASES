@@ -14,13 +14,18 @@ class Controller
   }
   public function index()
   {
-    $alquileres = $this->a_model->getAlquiler();
-    $this->view->mostrarIndex($alquileres);
+    $clientes = $this->a_model->getClientes();
+    $this->view->mostrarIndex($clientes);
   }
 
-  public function getLibres(){
-    $fecha = date('yyyy-MM-dd', $_POST['fecha']);
-    $this->model->getAlquiler($fecha);
+  // public function getLibres(){
+  //   $fecha = date('yyyy-MM-dd', $_POST['fecha']);
+  //   $this->model->getAlquiler($fecha);
+  // }
+  public function getCliente(){
+    $cuit_cuil = $_POST['cuit_cuil'];
+    $cliente = $this->a_model->getCliente($cuit_cuil);
+    $this->view->mostrarCliente($cliente);
   }
 }
 

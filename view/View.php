@@ -11,9 +11,13 @@ class View
     $this->smarty = new Smarty();
     $this->smarty->assign('titulo', 'Trabajo bases');
   }
-  function mostrarIndex($alquileres){
-    $this->smarty->assign('alquileres', $alquileres);
+  function mostrarIndex($clientes){
+    $this->smarty->assign('clientes', $clientes);
     $this->smarty->display('templates/index.tpl');
+    }
+    function mostrarCliente($cliente){
+      $this->smarty->assign('cliente', $cliente);
+      $this->smarty->display('templates/cliente.tpl');
     }
 }
  ?>

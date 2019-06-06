@@ -6,7 +6,8 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
         ''=> 'Controller#index',
-        // 'posLibres' => 'Controller#getLibres'
+        'cliente' => 'Controller#getCliente',
+        'cliente' => 'Controller#getCliente'
 
     ];
 
