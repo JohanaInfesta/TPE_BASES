@@ -7,6 +7,10 @@ define('VALOR1', 1);
 define('VALOR2', 2);
 
     include_once 'config/ConfigApp.php';
+    include_once 'model/Model.php';
+    include_once 'model/indexModel.php';
+    include_once 'view/View.php';
+    include_once 'controller/Controller.php';
 
 
 function parseURL($url)
