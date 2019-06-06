@@ -9,22 +9,24 @@ class indexModel extends Model
 
   }
   // function getAlquiler($fecha){
-  //   $sentencia = $this->db->prepare("SELECT nro_estanteria, nro_fila, nro_posicion, pos_global, tipo
-  //                                     FROM unc_248998.fn_g02_listado_posiciones_libres('$fecha');");
+  //   $sentencia = $this->db->prepare("SELECT * FROM unc_248998.fn_g02_listado_posiciones_libres('$fecha');");
   //   $sentencia->execute();
   //   return $sentencia->fetchAll();
   //
   // }
-  function getCliente($cuit_cuil){
-    $sentence  = $this->db->prepare( "SELECT id_alquiler, nro_estanteria, nro_fila, nro_posicion, estado,
-                                    fecha_desde, fecha_hasta
-                                      FROM unc_248998.fn_g02_listado_posiciones_vacias_para_clienteX($cuit_cuil);");
-    $sentence->execute();
-    return $sentence->fetchAll();
+  // function getCliente($cuit_cuil){
+  //   $sentence  = $this->db->prepare( 'SELECT * FROM unc_248998.g02_cliente WHERE cuit_cuil = ?');
+  //   $sentence->execute([$cuit_cuil]);
+  //   return $sentence->fetch();
+  // }
+  function getPosicionesCliente($cuit_cuil){
+    $sentence  = $this->db->prepare( "SELECT * FROM unc_248998.fn_g02_listado_posiciones_vacias_para_clienteX(?)");
+    $sentence->execute([$cuit_cuil]);
+    return $sentence->fetch(PDO::FETCH_ASSOC);
   }
+
   function getClientes(){
-    $sentence = $this->db->prepare( "SELECT cuit_cuil, apellido, nombre
-                                      FROM unc_248998.fn_g02_listado_clientes()");
+    $sentence = $this->db->prepare( 'SELECT * FROM unc_248998.g02_cliente');
     $sentence->execute();
     return $sentence->fetchAll(PDO::FETCH_ASSOC);
   }

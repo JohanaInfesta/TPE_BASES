@@ -22,10 +22,10 @@ class Controller
   //   $fecha = date('yyyy-MM-dd', $_POST['fecha']);
   //   $this->model->getAlquiler($fecha);
   // }
-  public function getCliente(){
+  public function getPosicionesCliente(){
     $cuit_cuil = $_POST['cuit_cuil'];
-    $cliente = $this->a_model->getCliente($cuit_cuil);
-    $this->view->mostrarCliente($cliente);
+    $posiciones = $this->a_model->getPosicionesCliente($cuit_cuil);
+    $this->view->mostrarPosicionesCliente($posiciones);
   }
 }
 

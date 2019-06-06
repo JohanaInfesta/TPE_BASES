@@ -13,7 +13,7 @@
       <button class="btn dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle = "dropdown" aria-haspopup="true" aria-expanded ="false">Clientes</button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="cliente">
         {foreach from=$clientes item=cliente}
-        <a class="dropdown-item" href="#" onclick="navigatePost('http://localhost/tpe-bases/cliente', {ldelim}cuit_cuil:{$cliente['cuit_cuil']}{rdelim})">
+        <a class="dropdown-item" href="#" onclick="navigatePost('http://localhost/tpe-bases/posicionesCliente', {ldelim}cuit_cuil:{$cliente['cuit_cuil']}{rdelim})">
           {$cliente['cuit_cuil']} {$cliente['nombre']} {$cliente['apellido']}
         </a>
         {/foreach}
