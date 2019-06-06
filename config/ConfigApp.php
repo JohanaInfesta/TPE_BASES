@@ -7,7 +7,7 @@ class ConfigApp
     public static $ACTIONS = [
         ''=> 'Controller#index',
         'posicionesCliente' => 'Controller#getPosicionesCliente',
-        'cliente' => 'Controller#getCliente'
+        'posicionesLibres' => 'Controller#getPosicionesLibres'
 
     ];
 

@@ -14,10 +14,14 @@ class View
   function mostrarIndex($clientes){
     $this->smarty->assign('clientes', $clientes);
     $this->smarty->display('templates/index.tpl');
-    }
-    function mostrarPosicionesCliente($posiciones){
-      $this->smarty->assign('posiciones', $posiciones);
-      $this->smarty->display('templates/posicionesCliente.tpl');
-    }
+  }
+  function mostrarPosicionesCliente($posiciones){
+    $this->smarty->assign('posiciones', $posiciones);
+    $this->smarty->display('templates/posicionesCliente.tpl');
+  }
+  function mostrarPosicionesLibres($posLibres){
+    $this->smarty->assign('posLibres', $posLibres);
+    $this->smarty->display('templates/posicionesLibres.tpl');
+  }
 }
- ?>
+?>

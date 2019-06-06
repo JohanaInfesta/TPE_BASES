@@ -6,23 +6,18 @@ class indexModel extends Model
     $sentencia = $this->db->prepare("SELECT nro_posicion, nro_fila FROM unc_248998.g02_alquiler_posiciones");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
   }
-  // function getAlquiler($fecha){
-  //   $sentencia = $this->db->prepare("SELECT * FROM unc_248998.fn_g02_listado_posiciones_libres('$fecha');");
-  //   $sentencia->execute();
-  //   return $sentencia->fetchAll();
-  //
-  // }
-  // function getCliente($cuit_cuil){
-  //   $sentence  = $this->db->prepare( 'SELECT * FROM unc_248998.g02_cliente WHERE cuit_cuil = ?');
-  //   $sentence->execute([$cuit_cuil]);
-  //   return $sentence->fetch();
-  // }
+
+  function getPosicionesLibres($fecha){
+    $sentencia = $this->db->prepare("SELECT * FROM unc_248998.fn_g02_listado_posiciones_libres($fecha);");
+    $sentencia->execute([$fecha]);
+    return $sentencia->fetchAll();
+  }
+
   function getPosicionesCliente($cuit_cuil){
     $sentence  = $this->db->prepare( "SELECT * FROM unc_248998.fn_g02_listado_posiciones_vacias_para_clienteX(?)");
     $sentence->execute([$cuit_cuil]);
-    return $sentence->fetch(PDO::FETCH_ASSOC);
+    return $sentence->fetchAll(PDO::FETCH_ASSOC);
   }
 
   function getClientes(){

@@ -7,7 +7,7 @@
   <title>Trabajo Bases</title>
 </head>
 <body>
-  <header class="">
+
 <div class="">
     <div class="dropdown show">
       <button class="btn dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle = "dropdown" aria-haspopup="true" aria-expanded ="false">Clientes</button>
@@ -20,7 +20,15 @@
       </div>
     </div>
 </div>
-  </header>
+<div class="">
+  <div class="">
+    <!-- <form enctype="multipart/form-data" method="get" onsubmit="saveBook(this, event)"> -->
+      <label for="fecha"></label>
+      <input type="date" name="fecha" value="" id="fecha">
+      <button type="button" onclick="navigatePost('http://localhost/tpe-bases/posicionesLibres')">Buscar</button>
+    <!-- </form> -->
+  </div>
+</div>
   <div class="main-content">
 
   </div>

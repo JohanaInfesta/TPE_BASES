@@ -18,10 +18,11 @@ class Controller
     $this->view->mostrarIndex($clientes);
   }
 
-  // public function getLibres(){
-  //   $fecha = date('yyyy-MM-dd', $_POST['fecha']);
-  //   $this->model->getAlquiler($fecha);
-  // }
+  public function getPosicionesLibres(){
+    $fecha = date('yyyy-MM-dd', $_POST['fecha']);
+    $posLibres = $this->a_model->getPosicionesLibres($fecha);
+    $this->view->mostrarPosicionesLibres($posLibres);
+  }
   public function getPosicionesCliente(){
     $cuit_cuil = $_POST['cuit_cuil'];
     $posiciones = $this->a_model->getPosicionesCliente($cuit_cuil);

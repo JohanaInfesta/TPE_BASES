@@ -2,7 +2,7 @@
   <div class="pos_cliente">
     <!-- <div id="{$cliente['cuit_cuil']}"> -->
       {if {$posiciones}}
-      <table>
+      <table class="table_pos_cliente">
         <thead>
           <tr>
             <th>ID alquiler</th>
@@ -28,7 +28,7 @@
           {/foreach}
         </tbody>
       </table>
-      {else} <h1>No se encontraron posiciones para este cliente</h1>
+      {else} <h1>No se encontraron posiciones libres de este cliente</h1>
       {/if}
     <!-- </div> -->
   </div>
