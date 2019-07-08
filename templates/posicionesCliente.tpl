@@ -1,7 +1,8 @@
 <div class="container container-cliente cuerpo-index cliente" >
   <div class="pos_cliente row justify-content-md-center">
     <!-- <div id="{$cliente['cuit_cuil']}"> -->
-      {if {$posiciones}}
+      {if {count($posiciones)}!=0}    
+    <p class="html">Total:{count($posiciones)}</p>        
       <table class="table table_pos_cliente table-striped">
         <thead>
           <tr>

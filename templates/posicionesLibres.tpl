@@ -1,8 +1,7 @@
 <div class="container container-libres cuerpo-index Libres">
-  <div class="pos_libre row justify-content-md-center">
-  <p class="html">Total:{if {$posLibres}}{count($posLibres)}{else} 0{/if}</p>
-
-    {if {$posLibres}}
+  <div class="pos_libre row justify-content-md-center">   
+    {if {count($posLibres)} != 0}
+    <p class="html">Total:{count($posLibres)}</p>
     <table class="table_pos_libre table table-striped">
       <thead>
         <tr>
