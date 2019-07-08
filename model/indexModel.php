@@ -9,9 +9,9 @@ class indexModel extends Model
   }
 
   function getPosicionesLibres($fecha){
-    $sentencia = $this->db->prepare("SELECT * FROM unc_248998.fn_g02_listado_posiciones_libres($fecha);");
+    $sentencia = $this->db->prepare("SELECT * FROM unc_248998.fn_g02_listado_posiciones_libres('$fecha');");
     $sentencia->execute([$fecha]);
-    return $sentencia->fetchAll();
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
   function getPosicionesCliente($cuit_cuil){

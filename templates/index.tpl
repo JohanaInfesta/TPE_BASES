@@ -25,7 +25,7 @@
     <!-- <form enctype="multipart/form-data" method="get" onsubmit="saveBook(this, event)"> -->
       <label for="fecha"></label>
       <input type="date" name="fecha" value="" id="fecha">
-      <button type="button" onclick="navigatePost('http://localhost/tpe-bases/posicionesLibres')">Buscar</button>
+      <button type="button" onclick="navigatePost('http://localhost/tpe-bases/posicionesLibres',)">Buscar</button>
     <!-- </form> -->
   </div>
 </div>

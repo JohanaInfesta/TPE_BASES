@@ -19,7 +19,7 @@ class Controller
   }
 
   public function getPosicionesLibres(){
-    $fecha = date('yyyy-MM-dd', $_POST['fecha']);
+    $fecha =  $_POST['fecha'];
     $posLibres = $this->a_model->getPosicionesLibres($fecha);
     $this->view->mostrarPosicionesLibres($posLibres);
   }
