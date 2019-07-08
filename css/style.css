@@ -1,3 +1,27 @@
+/*
+font-family: 'Mountains of Christmas', cursive;
+font-family: 'Arvo', serif;
+*/
+
 .authorsDropdown:hover .dropdown-menu {
     display: block;
+}
+
+*{
+    font-family: 'Arvo', serif;
+    font-size: 2.2vh;
+    text-align: center !important;
+}
+html{
+    height: -webkit-fill-available;    
+}
+body{
+    background-image: linear-gradient(#b977f3,#cb9cf8, #d8b5f8, #cb9cf8, #b977f3);
+    height: -webkit-fill-available;
+}
+
+.title{
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 10vh;
+    text-align: left;
 }
